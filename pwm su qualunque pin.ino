@@ -16,10 +16,10 @@ void loop() {
   digitalWrite(13, LOW);
   delayMicroseconds(MAX - i);
 
-  if ((c%5) == 0)  i= i + sgn;
-  if (i >= 100) sgn = !sgn; // -1
+  if ((c%5) == 0)  i= i + sgn; //rallentatore
+  if (i >= 100) sgn = !sgn; // quando i arriva a 100 (max durata per l' HIGH), sgn viene invertito così si ha il decadimento (fade del led)
   if (i <=0) {
-    sgn = !sgn;
+    sgn = !sgn; //ricomincia la scalata fino ad arrivare a 100
     i = 1;
   }
 
