@@ -24,7 +24,7 @@ void loop() {
   int velocita;
   int luce = analogRead (A0); //legge valore da 0 a 1023 della luce sulla stanza
   if(luce > 500 or digitalRead(2) == HIGH){
-      if(digitalRead(4) == LOW){
+      if(digitalRead(4) == HIGH){
         dir = 0;// senso antiorario, ossia tirare sù le tapparelle
         velocita = 255;
       }else {velocita = 0;
